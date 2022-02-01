@@ -8,20 +8,29 @@
   </head>
   <body></body>
   <script>
+    /**
+     * Algorithm
+     * 1. check for input is null, undefined, falsy(return Please Enter a proper value).
+     * 2. check input is not array (return please enter proper value)
+     * 3. map first array then map second array
+     * 4. check first array val with second array value if equal then push in empty arr
+     * 5. return empty array
+     */
     const arr1 = [9, 8, 2, 6, 3, 4];
     const arr2 = [8, 0, 8, 5, 6, 5];
     const arr3 = [];
     function ArrayIntersection(arr1, arr2) {
-      if (!arr1 && !arr2) {
+      if (!arr1 || !arr2) {
         return "Please Enter a proper value";
       }
-      arr1.map((val1) => {
-        arr2.map((val2) => {
-          if (val1 === val2) {
-            arr3.push(val1);
-          }
+      if (Array.isArray(ar))
+        arr1.map((val1) => {
+          arr2.map((val2) => {
+            if (val1 === val2) {
+              arr3.push(val1);
+            }
+          });
         });
-      });
       return arr3;
     }
     console.log(ArrayIntersection("dd"));
