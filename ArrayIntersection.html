@@ -12,6 +12,9 @@
     const arr2 = [8, 0, 8, 5, 6, 5];
     const arr3 = [];
     function ArrayIntersection(arr1, arr2) {
+      if (!arr1 && !arr2) {
+        return "Please Enter a proper value";
+      }
       arr1.map((val1) => {
         arr2.map((val2) => {
           if (val1 === val2) {
@@ -21,6 +24,6 @@
       });
       return arr3;
     }
-    console.log(ArrayIntersection(arr1, arr2));
+    console.log(ArrayIntersection("dd"));
   </script>
 </html>
